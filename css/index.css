@@ -1,0 +1,41 @@
+:root {
+  --name-background: #eceff1;
+  --body-background: #799ba9;
+}
+
+body {
+  background-color: var(--body-background);
+  height: 100vh;
+}
+
+.name {
+  width: 80%;
+  background-color: var(--name-background);
+  font-size: 64px;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-text-stroke: 1.5px black;
+}
+
+@media (max-width: 900px) {
+  .name {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 700px) {
+  .name {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 545px) {
+  .name {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 445px) {
+  .name {
+    font-size: 18px;
+  }
+}
