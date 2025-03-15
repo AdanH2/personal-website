@@ -1,3 +1,12 @@
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --body-background: #799ba9;
+}
+
+body {
+  background-color: var(--body-background);
+  height: 100vh;
+}

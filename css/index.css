@@ -1,11 +1,8 @@
 :root {
   --name-background: #eceff1;
-  --body-background: #799ba9;
-}
-
-body {
-  background-color: var(--body-background);
-  height: 100vh;
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #747474;
 }
 
 .name {
@@ -13,10 +10,58 @@ body {
   background-color: var(--name-background);
   font-size: 64px;
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-text-stroke: 1.5px black;
+  -webkit-text-stroke: 1.5px var(--black);
 }
 
-@media (max-width: 900px) {
+.link_wrapper {
+  display: flex;
+}
+
+a {
+  width: 25%;
+  height: 50px;
+  line-height: 48px;
+  text-decoration: none;
+  background: var(--name-background);
+  color: var(--black);
+  font-size: 18px;
+  letter-spacing: 2px;
+  border: 3px solid var(--black);
+  transition: all 0.35s;
+}
+
+.icon {
+  position: absolute;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  transform: rotate(45deg);
+  z-index: -1;
+  transition: all 0.35s;
+}
+
+.icon svg {
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: var(--name-background);
+  transition: all 0.35s;
+}
+
+a:hover {
+  border: 3px solid var(--name-background);
+  background: transparent;
+  color: var(--name-background);
+}
+
+a:hover + .icon {
+  border: 3px solid var(--name-background);
+  left: calc(62% - 15px);
+}
+@media (max-width: 950px) {
   .name {
     font-size: 48px;
   }
@@ -31,11 +76,19 @@ body {
 @media (max-width: 545px) {
   .name {
     font-size: 28px;
+    color: var(--grey);
+    -webkit-text-stroke: var(--white);
+  }
+
+  a {
+    width: 50%;
   }
 }
 
 @media (max-width: 445px) {
   .name {
     font-size: 18px;
+    color: var(--grey);
+    -webkit-text-stroke: var(--white);
   }
 }
