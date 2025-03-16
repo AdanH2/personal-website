@@ -1,5 +1,7 @@
 :root {
   --nav-background: #799ba9;
+  --cloud-color: #eceff1;
+  --cloud-shadow: #00000033;
 }
 
 body {
@@ -18,8 +20,8 @@ body {
   margin-top: 20px;
   width: 150px;
   height: 50px;
-  background: #eceff1;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+  background: var(--cloud-color);
+  box-shadow: 10px 10px var(--cloud-shadow);
   border-radius: 150px;
 }
 .cloud::after,

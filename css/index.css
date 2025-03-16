@@ -13,10 +13,6 @@
   -webkit-text-stroke: 1.5px var(--black);
 }
 
-.link_wrapper {
-  display: flex;
-}
-
 a {
   width: 25%;
   height: 50px;
