@@ -8,12 +8,11 @@
 .name {
   width: 80%;
   background-color: var(--name-background);
+  color: var(--grey);
   font-size: 64px;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-text-stroke: 1.5px var(--black);
 }
 
-a {
+.enter {
   width: 25%;
   height: 50px;
   line-height: 48px;
@@ -47,13 +46,13 @@ a {
   transition: all 0.35s;
 }
 
-a:hover {
+.enter:hover {
   border: 3px solid var(--name-background);
   background: transparent;
   color: var(--name-background);
 }
 
-a:hover + .icon {
+.enter:hover + .icon {
   border: 3px solid var(--name-background);
   left: calc(62% - 15px);
 }
@@ -68,11 +67,11 @@ a:hover + .icon {
     font-size: 36px;
   }
 
-  a {
+  .enter {
     width: 50%;
   }
 
-  a:hover + .icon {
+  .enter:hover + .icon {
     border: 3px solid var(--name-background);
     left: calc(75% - 15px);
   }
@@ -81,15 +80,11 @@ a:hover + .icon {
 @media (max-width: 545px) {
   .name {
     font-size: 28px;
-    color: var(--grey);
-    -webkit-text-stroke: var(--white);
   }
 }
 
 @media (max-width: 445px) {
   .name {
     font-size: 18px;
-    color: var(--grey);
-    -webkit-text-stroke: var(--white);
   }
 }

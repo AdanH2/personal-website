@@ -10,3 +10,21 @@ document.getElementById("navObject").addEventListener("load", function () {
     });
   });
 });
+
+const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+
+const populateJoke = async () => {
+  try {
+    const response = await fetch(
+      "https://official-joke-api.appspot.com/random_joke"
+    );
+    const { setup, punchline } = await response.json();
+    document.getElementById("setup").textContent = `${setup}`;
+    await delay(5000);
+    document.getElementById("punchline").textContent = `${punchline}`;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+populateJoke();
